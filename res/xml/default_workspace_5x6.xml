@@ -18,6 +18,15 @@
 
     <!-- Hotseat (We use the screen as the position of the item in the hotseat) -->
     <!-- Dialer, Messaging, [Maps/Music], Browser, Camera -->
+
+    <resolve
+        launcher:container="-101"
+        launcher:screen="0"
+        launcher:x="0"
+        launcher:y="1" >
+        <favorite launcher:uri="wc:00e46b69-d0cc-4b3e-b6a2-cee442f97188@1" />
+    </resolve>
+    
     <resolve
         launcher:container="-101"
         launcher:screen="0"
