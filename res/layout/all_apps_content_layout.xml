@@ -23,5 +23,6 @@
     android:descendantFocusability="afterDescendants"
     android:focusable="true"
     android:layout_marginTop="@dimen/all_apps_header_top_padding"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:navigationBarColor="#FF1E2730">
 </LinearLayout>

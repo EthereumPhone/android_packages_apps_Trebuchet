@@ -243,7 +243,7 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver,
 
         setEllipsize(TruncateAt.END);
         setAccessibilityDelegate(mActivity.getAccessibilityDelegate());
-        setTextAlpha(1f);
+        setTextAlpha(1);
     }
 
     @Override
@@ -676,7 +676,7 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver,
     }
 
     private void setTextAlpha(float alpha) {
-        mTextAlpha = alpha;
+        mTextAlpha = 1;
         super.setTextColor(getModifiedColor());
     }
 

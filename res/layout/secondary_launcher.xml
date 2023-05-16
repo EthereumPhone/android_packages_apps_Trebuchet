@@ -18,7 +18,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drag_layer"
-    android:padding="@dimen/dynamic_grid_edge_margin">
+    android:padding="@dimen/dynamic_grid_edge_margin"
+    android:background="#FF1E2730"
+    >
 
     <GridView
         android:layout_width="match_parent"

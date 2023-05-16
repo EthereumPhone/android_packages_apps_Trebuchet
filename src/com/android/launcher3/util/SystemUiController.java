@@ -76,11 +76,7 @@ public class SystemUiController {
     }
 
     private int getSysUiVisibilityFlags(int stateFlag, int currentVisibility) {
-        if ((stateFlag & FLAG_LIGHT_NAV) != 0) {
-            currentVisibility |= View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
-        } else if ((stateFlag & FLAG_DARK_NAV) != 0) {
-            currentVisibility &= ~(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
-        }
+        currentVisibility &= ~(View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
 
         if ((stateFlag & FLAG_LIGHT_STATUS) != 0) {
             currentVisibility |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;

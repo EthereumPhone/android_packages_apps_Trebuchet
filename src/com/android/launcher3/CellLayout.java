@@ -83,7 +83,7 @@ import java.util.Stack;
 
 public class CellLayout extends ViewGroup {
     private static final String TAG = "CellLayout";
-    private static final boolean LOGD = false;
+    private static final boolean LOGD = true;
 
     protected final ActivityContext mActivity;
     @ViewDebug.ExportedProperty(category = "launcher")
@@ -717,8 +717,10 @@ public class CellLayout extends ViewGroup {
 
         // Hotseat icons - remove text
         if (child instanceof BubbleTextView) {
+            System.out.println("BUBBLETEXTVIEW");
             BubbleTextView bubbleChild = (BubbleTextView) child;
-            bubbleChild.setTextVisibility(mContainerType != HOTSEAT);
+            System.out.println("BUBBLETEXTVIEW, text: " + bubbleChild.getText());
+            bubbleChild.setTextVisibility(true);
         }
 
         child.setScaleX(mChildScale);
@@ -735,6 +737,7 @@ public class CellLayout extends ViewGroup {
             child.setId(childId);
             if (LOGD) {
                 Log.d(TAG, "Adding view to ShortcutsAndWidgetsContainer: " + child);
+                Log.d(TAG, "Adding view to ShortcutsAndWidgetsContainer: " + child.getHeight());
             }
             mShortcutsAndWidgets.addView(child, index, lp);
 
